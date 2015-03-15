@@ -1,0 +1,5 @@
+C:\Users\Alexandru\Desktop\stringOperations\stringOperations\bin\Debug\stringOperations.exe.config
+C:\Users\Alexandru\Desktop\stringOperations\stringOperations\bin\Debug\stringOperations.exe
+C:\Users\Alexandru\Desktop\stringOperations\stringOperations\bin\Debug\stringOperations.pdb
+C:\Users\Alexandru\Desktop\stringOperations\stringOperations\obj\Debug\stringOperations.exe
+C:\Users\Alexandru\Desktop\stringOperations\stringOperations\obj\Debug\stringOperations.pdb
