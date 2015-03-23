@@ -89,7 +89,6 @@ namespace ProgrammingAssignment3
         /// <param name="gameTime">game time</param>
         public void Update(GameTime gameTime)
         {
-            Random rand = new Random();
             // STUDENTS: Only update the rock if it's inside the window
             if (!OutsideWindow)
             {
@@ -98,10 +97,7 @@ namespace ProgrammingAssignment3
                 drawRectangle.Y += (int)(velocity.Y * gameTime.ElapsedGameTime.Milliseconds);
 
                 // STUDENTS: Set outsideWindow to true if the rock is outside the window
-                if (drawRectangle.Top > windowHeight || drawRectangle.Bottom < 0 || drawRectangle.Right < 0 || drawRectangle.Left > windowWidth)
-                {
-                    outsideWindow = true;
-                }
+                outsideWindow = drawRectangle.Top > windowHeight || drawRectangle.Bottom < 0 || drawRectangle.Right < 0 || drawRectangle.Left > windowWidth;
             }
         }
 

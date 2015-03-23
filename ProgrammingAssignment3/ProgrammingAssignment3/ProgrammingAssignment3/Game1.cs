@@ -233,7 +233,7 @@ namespace ProgrammingAssignment3
             int velocityNumber = rand.Next(0, 4);
             if (velocityNumber == 0)
             {
-                return upLeft * ElapsedGameTime.Milliseconds;
+                return upLeft;
             }
             else if (velocityNumber == 1)
             {

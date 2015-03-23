@@ -88,11 +88,10 @@ namespace GameProject
 
             // load sprite font
            
-
             // load projectile and explosion sprites
 
             // add initial game objects
-            burger = new Burger(Content, "burger", GameConstants.WINDOW_WIDTH / 2, GameConstants.WINDOW_HEIGHT / 8, null);
+            burger = new Burger(Content, "burger", graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight - graphics.PreferredBackBufferHeight / 8, null);
             SpawnBear();
 
             // set initial health and score strings
@@ -164,6 +163,7 @@ namespace GameProject
 
             // draw game objects
             burger.Draw(spriteBatch);
+
             foreach (TeddyBear bear in bears)
             {
                 bear.Draw(spriteBatch);
@@ -216,20 +216,17 @@ namespace GameProject
         private void SpawnBear()
         {
             // generate random location
-            int locationX = GetRandomLocation(GameConstants.SPAWN_BORDER_SIZE, GameConstants.WINDOW_WIDTH - GameConstants.SPAWN_BORDER_SIZE);
-	        int locationY = GetRandomLocation(GameConstants.SPAWN_BORDER_SIZE/4, GameConstants.WINDOW_HEIGHT - 2 * GameConstants.SPAWN_BORDER_SIZE);
+            int locationX = GetRandomLocation(GameConstants.SPAWN_BORDER_SIZE, graphics.PreferredBackBufferWidth - 2 * GameConstants.SPAWN_BORDER_SIZE);
+	        int locationY = GetRandomLocation(GameConstants.SPAWN_BORDER_SIZE, graphics.PreferredBackBufferHeight - 2 * GameConstants.SPAWN_BORDER_SIZE);
             
             // generate random velocity
-            float randSpeed = RandomNumberGenerator.NextFloat(GameConstants.BEAR_SPEED_RANGE);
-            double randAngle = RandomNumberGenerator.NextFloat((float)Math.PI);
+            float randSpeed = GameConstants.MIN_BEAR_SPEED + RandomNumberGenerator.NextFloat(GameConstants.BEAR_SPEED_RANGE);
+            double randAngle = RandomNumberGenerator.NextFloat((float)Math.PI * 2);
 
-            float xVelocity = (float)(randSpeed * Math.Cos(randAngle));
-            float yVelocity = (float)(randSpeed * Math.Sin(randAngle));
-
-            Vector2 velocity = new Vector2(xVelocity, yVelocity);
+            Vector2 velocity = new Vector2((float)(randSpeed * Math.Cos(randAngle)), (float)(randSpeed * Math.Sin(randAngle)));
 
             // create new bear
-            TeddyBear newBear = new TeddyBear(this.Content, "teddybear", locationX, locationY, velocity, null, null);
+            TeddyBear newBear = new TeddyBear(Content, "teddybear", locationX, locationY, velocity, null, null);
 
             // make sure we don't spawn into a collision
 
