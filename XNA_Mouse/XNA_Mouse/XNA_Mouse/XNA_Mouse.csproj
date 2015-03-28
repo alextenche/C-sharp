@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{827354A6-482C-4098-8CDC-B00C9D996828}</ProjectGuid>
+    <ProjectGuid>{547D2115-A237-4CE3-B7F3-1BC64570C7BB}</ProjectGuid>
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lab11</RootNamespace>
-    <AssemblyName>Lab11</AssemblyName>
+    <RootNamespace>XNA_Mouse</RootNamespace>
+    <AssemblyName>XNA_Mouse</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
     <XnaPlatform>Windows</XnaPlatform>
     <XnaProfile>Reach</XnaProfile>
-    <XnaCrossPlatformGroupID>96ca73e8-098a-44cf-8290-5bbb7c371dd6</XnaCrossPlatformGroupID>
+    <XnaCrossPlatformGroupID>fa8ddf89-c014-43a5-a9d9-1de16d17d59f</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
@@ -83,8 +83,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lab11Content\Lab11Content.contentproj">
-      <Name>Lab11Content</Name>
+    <ProjectReference Include="..\XNA_MouseContent\XNA_MouseContent.contentproj">
+      <Name>XNA_MouseContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
     </ProjectReference>
   </ItemGroup>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab11", "Lab11\Lab11\Lab11.csproj", "{2DD81C05-1474-4618-891E-B45A267A7BDB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab11", "Lab11\Lab11\Lab11.csproj", "{827354A6-482C-4098-8CDC-B00C9D996828}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Lab11Content", "Lab11\Lab11Content\Lab11Content.contentproj", "{683393EA-9A86-42ED-85E3-BFB29B41895B}"
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Lab11Content", "Lab11\Lab11Content\Lab11Content.contentproj", "{F124B9ED-5A4B-4827-A5B0-119A17D34823}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,12 +13,12 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2DD81C05-1474-4618-891E-B45A267A7BDB}.Debug|x86.ActiveCfg = Debug|x86
-		{2DD81C05-1474-4618-891E-B45A267A7BDB}.Debug|x86.Build.0 = Debug|x86
-		{2DD81C05-1474-4618-891E-B45A267A7BDB}.Release|x86.ActiveCfg = Release|x86
-		{2DD81C05-1474-4618-891E-B45A267A7BDB}.Release|x86.Build.0 = Release|x86
-		{683393EA-9A86-42ED-85E3-BFB29B41895B}.Debug|x86.ActiveCfg = Debug|x86
-		{683393EA-9A86-42ED-85E3-BFB29B41895B}.Release|x86.ActiveCfg = Release|x86
+		{827354A6-482C-4098-8CDC-B00C9D996828}.Debug|x86.ActiveCfg = Debug|x86
+		{827354A6-482C-4098-8CDC-B00C9D996828}.Debug|x86.Build.0 = Debug|x86
+		{827354A6-482C-4098-8CDC-B00C9D996828}.Release|x86.ActiveCfg = Release|x86
+		{827354A6-482C-4098-8CDC-B00C9D996828}.Release|x86.Build.0 = Release|x86
+		{F124B9ED-5A4B-4827-A5B0-119A17D34823}.Debug|x86.ActiveCfg = Debug|x86
+		{F124B9ED-5A4B-4827-A5B0-119A17D34823}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
