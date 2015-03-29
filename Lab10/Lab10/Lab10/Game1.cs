@@ -35,7 +35,8 @@ namespace Lab10
             Content.RootDirectory = "Content";
 
             graphics.PreferredBackBufferWidth = WINDOW_WIDTH;
-            graphics.PreferredBackBufferHeight = WINDOW_HEIGHT;
+            graphics.PreferredBackBufferHeight = WINDOW_HEIGHT;
+
         }
 
         /// <summary>

@@ -1,1 +1,2 @@
 C:\Users\Alexandru\Desktop\Lab10\Lab10\Lab10Content\obj\x86\Debug\Lab10Content.contentprojResolveAssemblyReference.cache
+C:\Users\Alexandru\Desktop\C-sharp\Lab10\Lab10\Lab10Content\obj\x86\Debug\Lab10Content.contentprojResolveAssemblyReference.cache

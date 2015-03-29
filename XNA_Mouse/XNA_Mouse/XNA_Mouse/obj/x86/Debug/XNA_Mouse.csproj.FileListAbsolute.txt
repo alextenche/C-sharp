@@ -7,3 +7,13 @@ C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\XNA_Mouse
 C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\XNA_Mouse.pdb
 C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\obj\x86\Debug\XNA_Mouse.exe
 C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\obj\x86\Debug\XNA_Mouse.pdb
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character0.xnb
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character1.xnb
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character2.xnb
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character3.xnb
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\XNA_Mouse.exe
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\XNA_Mouse.pdb
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\obj\x86\Debug\XNA_Mouse.csprojResolveAssemblyReference.cache
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\obj\x86\Debug\XNA_Mouse.exe
+C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\obj\x86\Debug\XNA_Mouse.pdb

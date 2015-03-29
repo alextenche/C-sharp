@@ -28,10 +28,8 @@ namespace XNA_Mouse
 
         // random character support
         Random rand = new Random();
-        Texture2D character0;
-        Texture2D character1;
-        Texture2D character2;
-        Texture2D character3;
+        List<Texture2D> characters = new List<Texture2D>();
+        //Texture2D[] characters = new Texture2D[4];
 
         // click support
         ButtonState previousButtonState = ButtonState.Released;
@@ -70,13 +68,13 @@ namespace XNA_Mouse
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // load character sprites
-            character0 = Content.Load<Texture2D>("character0");
-            character1 = Content.Load<Texture2D>("character1");
-            character2 = Content.Load<Texture2D>("character2");
-            character3 = Content.Load<Texture2D>("character3");
+            characters.Add(Content.Load<Texture2D>("character0"));
+            characters.Add(Content.Load<Texture2D>("character1"));
+            characters.Add(Content.Load<Texture2D>("character2"));
+            characters.Add(Content.Load<Texture2D>("character3"));
 
             // start character 0 in center of the window
-            currentCharacter = character0;
+            currentCharacter = characters[0];
             drawRectangle = new Rectangle(WINDOW_WIDTH / 2 - currentCharacter.Width / 2, WINDOW_HEIGHT / 2 - currentCharacter.Height / 2, currentCharacter.Width, currentCharacter.Height);
         }
 
@@ -127,29 +125,13 @@ namespace XNA_Mouse
             if (mouse.LeftButton == ButtonState.Released && previousButtonState == ButtonState.Pressed)
             {
                 // change to random character
-                int characterNumber = rand.Next(4);
-                if (characterNumber == 0)
-                {
-                    currentCharacter = character0;
-                }
-                else if (characterNumber == 1)
-                {
-                    currentCharacter = character1;
-                }
-                else if (characterNumber == 2)
-                {
-                    currentCharacter = character2;
-                }
-                else
-                {
-                    currentCharacter = character3;
-                }
+                currentCharacter = characters[rand.Next(4)];
+
                 drawRectangle.Width = currentCharacter.Width;
                 drawRectangle.Height = currentCharacter.Height;
             }
 
-            previousButtonState = mouse.LeftButton;
-            
+            previousButtonState = mouse.LeftButton;            
 
             base.Update(gameTime);
         }

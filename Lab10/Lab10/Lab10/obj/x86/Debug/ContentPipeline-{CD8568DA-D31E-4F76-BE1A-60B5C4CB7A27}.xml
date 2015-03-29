@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\Lab10\Lab10\Lab10\bin\x86\Debug\Content\explosion.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\Lab10\Lab10\Lab10\bin\x86\Debug\Content\explosion.xnb</Output>
       <Time>2011-12-20T17:11:22+02:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\Lab10\Lab10\Lab10\bin\x86\Debug\Content\teddybear0.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\Lab10\Lab10\Lab10\bin\x86\Debug\Content\teddybear0.xnb</Output>
       <Time>2011-12-11T13:44:36+02:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\Lab10\Lab10\Lab10\bin\x86\Debug\Content\teddybear1.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\Lab10\Lab10\Lab10\bin\x86\Debug\Content\teddybear1.xnb</Output>
       <Time>2011-12-11T13:45:06+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -35,10 +35,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alexandru\Desktop\Lab10\Lab10\Lab10Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alexandru\Desktop\Lab10\Lab10\Lab10\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alexandru\Desktop\Lab10\Lab10\Lab10\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alexandru\Desktop\Lab10\Lab10\Lab10\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Alexandru\Desktop\C-sharp\Lab10\Lab10\Lab10Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Alexandru\Desktop\C-sharp\Lab10\Lab10\Lab10\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Alexandru\Desktop\C-sharp\Lab10\Lab10\Lab10\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Alexandru\Desktop\C-sharp\Lab10\Lab10\Lab10\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

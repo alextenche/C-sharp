@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character0.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character0.xnb</Output>
       <Time>2015-03-03T23:56:48.88737+02:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character1.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character1.xnb</Output>
       <Time>2015-03-03T23:56:04.8384157+02:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character2.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character2.xnb</Output>
       <Time>2015-03-04T00:47:15.1281125+02:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character3.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\character3.xnb</Output>
       <Time>2015-03-04T00:47:15.1281125+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -44,10 +44,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_MouseContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alexandru\Desktop\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_MouseContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Alexandru\Desktop\C-sharp\XNA_Mouse\XNA_Mouse\XNA_Mouse\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
