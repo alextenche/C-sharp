@@ -124,8 +124,17 @@ namespace GameProject
         public void Update(GameTime gameTime, MouseState mouse)
         {
             // burger should only respond to input if it still has health
-
+            if (health > 0)
+            {
                 // move burger using mouse
+                if ((mouse.X > 0) && (mouse.X < GameConstants.WINDOW_WIDTH - 25))
+                {
+                    drawRectangle.X = mouse.X;
+                }
+                if ((mouse.Y > 0) && (mouse.Y < GameConstants.WINDOW_HEIGHT - 25))
+                {
+                    drawRectangle.Y = mouse.Y;
+                }
 
                 // clamp burger in window
 
@@ -133,6 +142,31 @@ namespace GameProject
                 // timer concept (for animations) introduced in Chapter 7
 
                 // shoot if appropriate
+                if (health > 0 && mouse.LeftButton == ButtonState.Pressed && canShoot == true)
+                {
+                    canShoot = false;
+                    Projectile projectile = new Projectile(ProjectileType.FrenchFries, Game1.GetProjectileSprite(ProjectileType.FrenchFries),
+                        drawRectangle.X, drawRectangle.Y - GameConstants.FRENCH_FRIES_PROJECTILE_OFFSET, GameConstants.TEDDY_BEAR_PROJECTILE_SPEED);
+                    
+                    Game1.AddProjectile(projectile);
+                }
+
+                if (canShoot == false)
+                {
+                    elapsedCooldownTime += gameTime.ElapsedGameTime.Milliseconds;
+                    //  hold the left mouse button to fire projectiles at a constant rate 
+                    if (elapsedCooldownTime >= GameConstants.BURGER_COOLDOWN_MILLISECONDS)
+                    {
+                        canShoot = true;
+                        elapsedCooldownTime = 0;
+                    }
+                    // fire faster if the player repeatedly presses and releases the left mouse button as quickly as they can 
+                    else if (mouse.LeftButton == ButtonState.Released)
+                    {
+                        canShoot = true;
+                    }
+                }     
+            }
 
         }
 
