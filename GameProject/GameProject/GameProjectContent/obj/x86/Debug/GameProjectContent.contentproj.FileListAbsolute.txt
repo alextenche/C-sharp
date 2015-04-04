@@ -1,2 +1,0 @@
-C:\Users\Alexandru\Desktop\GameProject\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
-C:\Users\Alexandru\Desktop\C-sharp\GameProject\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
