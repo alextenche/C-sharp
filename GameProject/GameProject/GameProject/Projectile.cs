@@ -89,19 +89,21 @@ namespace GameProject
         public void Update(GameTime gameTime)
         {
             // move projectile
+            // projectiles fired by Burger - french fries must go up
+            if (type == ProjectileType.FrenchFries)
+            {
+                drawRectangle.Y += (int)(yVelocity * gameTime.ElapsedGameTime.Milliseconds);
+            }
+
             // projectiles fired by TeddyBear - magenta little teddy bears must go down
             if (ProjectileType.TeddyBear == type)
             {
                 drawRectangle.Y += (int)(yVelocity * gameTime.ElapsedGameTime.Milliseconds);
             }
-            // projectiles fired by Burger - french fries must go up
-            if (type == ProjectileType.FrenchFries) 
-            {
-                drawRectangle.Y -= (int)(yVelocity * gameTime.ElapsedGameTime.Milliseconds);
-            }
+            
             
             // check for outside game window
-            if ((drawRectangle.Top < 0) || (drawRectangle.Bottom > GameConstants.WINDOW_HEIGHT))
+            if ((drawRectangle.Bottom < 0) || (drawRectangle.Top > GameConstants.WINDOW_HEIGHT))
             {
                 active = false;
             }

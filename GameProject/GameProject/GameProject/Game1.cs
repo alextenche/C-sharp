@@ -199,15 +199,19 @@ namespace GameProject
         public static Texture2D GetProjectileSprite(ProjectileType type)
         {
             // replace with code to return correct projectile sprite based on projectile type
-            if (ProjectileType.FrenchFries == type)
+            if (type == ProjectileType.FrenchFries)
             {
                 return frenchFriesSprite;
             }
-            if (ProjectileType.TeddyBear == type)
+            else if (type == ProjectileType.TeddyBear)
             {
                 return teddyBearProjectileSprite;
             }
-            return frenchFriesSprite;
+            else
+            {
+                return frenchFriesSprite;
+            }
+            
         }
 
         /// <summary>

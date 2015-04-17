@@ -145,13 +145,16 @@ namespace GameProject
             elapsedShotTime += gameTime.ElapsedGameTime.Milliseconds;
             if (elapsedShotTime > firingDelay)
             {
-                Projectile projectile = new Projectile(ProjectileType.TeddyBear, Game1.GetProjectileSprite(ProjectileType.TeddyBear), drawRectangle.X, drawRectangle.Y - GameConstants.TEDDY_BEAR_PROJECTILE_OFFSET, GameConstants.TEDDY_BEAR_PROJECTILE_SPEED);
-                Game1.AddProjectile(projectile);
-
                 elapsedShotTime = 0;
                 firingDelay = GetRandomFiringDelay();
-            }
 
+                Projectile projectile = new Projectile(ProjectileType.TeddyBear,
+                    Game1.GetProjectileSprite(ProjectileType.TeddyBear),
+                    drawRectangle.Center.X,
+                    drawRectangle.Center.Y + GameConstants.TEDDY_BEAR_PROJECTILE_OFFSET,
+                    GetProjectileYVelocity());
+                Game1.AddProjectile(projectile);  
+            }
         }
 
         /// <summary>
