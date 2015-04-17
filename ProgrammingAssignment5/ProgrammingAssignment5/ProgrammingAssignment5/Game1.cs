@@ -23,49 +23,34 @@ namespace ProgrammingAssignment5
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        // 2.Declared fields for the mine sprite and the list of mines in the Game1 class.
+        // game sprites
         Texture2D mineSprite;
-        List<Mine> mines;
-
-        // 3.Declared fields to support left click processing in the Game1 class.
-        bool leftButtonPressed;
-
-        // 5.Declared fields in the Game1 class to support spawning teddy bears at random times.
         Texture2D teddyBearSprite;
-        List<TeddyBear> teddyBears;
-        Random rand;
-
-        // 10.Declared fields in the Game1 class for the explosion sprite and the list of explosions
         Texture2D explosionSprite;
-        List<Explosion> explosions;
         
-        int teddyBearSpawnTime;
+        // game objects
+        List<Mine> mines = new List<Mine>();
+        List<TeddyBear> teddyBears = new List<TeddyBear>();
+        List<Explosion> explosions = new List<Explosion>();
+        
+        // click processing
+        bool leftClickStarted = false;
+        bool leftButtonReleased = true;
+
+        // random spawning support
+        int totalSpawnDelayMilliseconds;
+        int elapsedSpawnDelayMilliseconds;
+        Random rand = new Random();
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            // 1.Set the resolution and made the mouse visible in the Game1 constructor.
+            // set the resolution and made the mouse visible
             graphics.PreferredBackBufferWidth = WINDOW_WIDTH;
             graphics.PreferredBackBufferHeight = WINDOW_HEIGHT;
             IsMouseVisible = true;
-
-            // 2.list of Mines
-            mines = new List<Mine>();
-
-            // Init leftButton of mouse to not pressed
-            leftButtonPressed = false;
-
-            // 5.list of teddy bears
-            teddyBears = new List<TeddyBear>();
-
-            // 6.Set the first spawn delay between 1 and 3 seconds
-            rand = new Random();
-            teddyBearSpawnTime = rand.Next(1000, 3001);
-
-            // 10.list of explosions 
-            explosions = new List<Explosion>();
         }
 
         /// <summary>
@@ -88,14 +73,13 @@ namespace ProgrammingAssignment5
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // 2.Loaded the mine sprite in the Game1 LoadContent method.
+            // load teddyBear, mine and explosion sprites
             mineSprite = Content.Load<Texture2D>("mine");
-
-            // 6.Added code to the Game1 LoadContent method to load the teddy bear sprite.
             teddyBearSprite = Content.Load<Texture2D>("teddybear");
-
-            // 11.Added code to the Game1 LoadContent method to load the explosion sprite
             explosionSprite = Content.Load<Texture2D>("explosion");
+
+            // set first spawn delay between 1 and 3 seconds
+            totalSpawnDelayMilliseconds = rand.Next(1000,3001);
         }
 
         /// <summary>
@@ -118,62 +102,68 @@ namespace ProgrammingAssignment5
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // 3.Added code to the Game1 Update method to add a mine to the list of mines when a left click is finished.
+            // get current mouse state
             MouseState mouse = Mouse.GetState();
-            if (mouse.LeftButton == ButtonState.Pressed)
+
+            // check for left click started
+            if (mouse.LeftButton == ButtonState.Pressed && leftButtonReleased)
             {
-                leftButtonPressed = true;
+                leftClickStarted = true;
+                leftButtonReleased = false;
+            }
+            else if (mouse.LeftButton == ButtonState.Released)
+            {
+                leftButtonReleased = true;
+                // if left click finished, add new mine to the list
+                if (leftClickStarted) {
+                    leftClickStarted = false;
+                    mines.Add(new Mine(mineSprite, mouse.X, mouse.Y));
+                }
             }
 
-            if (mouse.LeftButton == ButtonState.Released && leftButtonPressed)
-            {
-                mines.Add(new Mine(mineSprite, mouse.X, mouse.Y));
-                leftButtonPressed = false;
-            }
-
-
-            // 7.Added code to the Game1 Update method to update the spawn timer and (when the timer is finished) reset the spawn timer,
-            // set a new random spawn delay between 1 and 3 seconds, 
+ 
             // spawn a new teddy bear (with a random velocity as described above) and add it to the list of teddy bears
-            if (teddyBearSpawnTime <= 0)
+            elapsedSpawnDelayMilliseconds += gameTime.ElapsedGameTime.Milliseconds;
+            if (elapsedSpawnDelayMilliseconds > totalSpawnDelayMilliseconds)
             {
-                teddyBearSpawnTime = rand.Next(1000, 3001);
-                teddyBears.Add(new TeddyBear(teddyBearSprite, new Vector2( (float) (rand.NextDouble() - 0.5), (float) ( rand.NextDouble() - 0.5)), WINDOW_WIDTH, WINDOW_HEIGHT));
-            }
-            else
-            {
-                teddyBearSpawnTime -= (int)gameTime.ElapsedGameTime.TotalMilliseconds;
-            }
-
-            // 9.Added code to the Game1 Update method to tell each of the teddy bears in the list of teddy bears to update itself.
-            foreach (TeddyBear singleTeddyBear in teddyBears)
-            {
-                singleTeddyBear.Update(gameTime);
+                elapsedSpawnDelayMilliseconds = 0;
+                totalSpawnDelayMilliseconds = rand.Next(1000, 3001);
+                teddyBears.Add(new TeddyBear(teddyBearSprite,
+                    new Vector2((float)rand.NextDouble() - 0.5f, (float)rand.NextDouble() - 0.5f),
+                    WINDOW_WIDTH, WINDOW_HEIGHT));
             }
 
-            // 12.Added code to the Game1 Update method to detect teddy bear collisions with mines and, if a collision is detected,
-            // make the teddy bear inactive, make the mine inactive, and add a new explosion to the list of explosions.
-            for (int i = 0; i < teddyBears.Count; i++)
+            
+            // check for teddy bear collisions with mines
+            foreach (TeddyBear teddyBear in teddyBears)
             {
-                for (int j = 0; j < mines.Count; j++)
+                foreach (Mine mine in mines)
                 {
-                    if (teddyBears[i].CollisionRectangle.Intersects(mines[j].CollisionRectangle))
-                    {                      
-                        teddyBears[i].Active = false;   
-                        mines[j].Active = false;
-                        explosions.Add(new Explosion(explosionSprite, teddyBears[i].CollisionRectangle.Center.X, teddyBears[i].CollisionRectangle.Center.Y));
+                    if (teddyBear.Active && mine.Active && teddyBear.CollisionRectangle.Intersects(mine.CollisionRectangle))
+                    {
+                        explosions.Add(new Explosion(explosionSprite, mine.CollisionRectangle.Center.X, mine.CollisionRectangle.Center.Y));
+                        teddyBear.Active = false;   
+                        mine.Active = false;
+                        
                         break;
                     }
                 }
             }
 
-            // 14.Added code to the Game1 Update method to tell each of the explosions in the list of explosions to update itself.
+      
+            // update game objects
+            foreach (TeddyBear teddyBear in teddyBears)
+            {
+                teddyBear.Update(gameTime);
+            }
+
             foreach (Explosion explosion in explosions)
             {
                 explosion.Update(gameTime);
             }
 
-            // 15.Added code to the Game1 Update method to remove inactive teddy bears, mines, and explosions from their respective lists
+
+            // clean out inactive objects
             for (int i = 0; i < teddyBears.Count; i++)
             {
                 if (!teddyBears[i].Active) { teddyBears.RemoveAt(i); }
@@ -200,24 +190,22 @@ namespace ProgrammingAssignment5
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+            // draw game objects
             spriteBatch.Begin();
 
-            // 4.Added code to the Game1 Draw method to tell each of the mines in the list of mines to draw itself.
-            foreach (Mine singleMine in mines)
+            foreach (Mine mine in mines)
             {
-                singleMine.Draw(spriteBatch);
+                mine.Draw(spriteBatch);
             }
 
-            // 8.Added code to the Game1 Draw method to tell each of the teddy bears in the list of teddy bears to draw itself.
-            foreach (TeddyBear singleTeddyBear in teddyBears)
+            foreach (TeddyBear teddyBear in teddyBears)
             {
-                singleTeddyBear.Draw(spriteBatch);
+                teddyBear.Draw(spriteBatch);
             }
 
-            // 13.Added code to the Game1 Draw method to tell each of the explosions in the list of explosions to draw itself.
-            foreach (Explosion singleExplosion in explosions)
+            foreach (Explosion explosion in explosions)
             {
-                singleExplosion.Draw(spriteBatch);
+                explosion.Draw(spriteBatch);
             }
 
             spriteBatch.End();

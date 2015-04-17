@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\explosion.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\explosion.xnb</Output>
       <Time>2011-12-20T16:11:20+02:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\mine.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\mine.xnb</Output>
       <Time>2014-04-01T18:40:28+03:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\teddybear.xnb</Output>
+      <Output>C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\teddybear.xnb</Output>
       <Time>2011-12-11T12:44:06+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -35,10 +35,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

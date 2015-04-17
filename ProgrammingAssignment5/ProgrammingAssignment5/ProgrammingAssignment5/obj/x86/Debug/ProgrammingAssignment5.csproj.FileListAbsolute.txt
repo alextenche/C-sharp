@@ -8,3 +8,17 @@ C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\Program
 C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\explosion.xnb
 C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\mine.xnb
 C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\teddybear.xnb
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\explosion.xnb
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\mine.xnb
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\Content\teddybear.xnb
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\ProgrammingAssignment5.exe
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\ProgrammingAssignment5.pdb
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\TeddyMineExplosion.dll
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\obj\x86\Debug\ProgrammingAssignment5.csprojResolveAssemblyReference.cache
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\obj\x86\Debug\ProgrammingAssignment5.exe
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\obj\x86\Debug\ProgrammingAssignment5.pdb
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\ProgrammingAssignment5.exe.manifest
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\bin\x86\Debug\ProgrammingAssignment5.application
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\obj\x86\Debug\ProgrammingAssignment5.exe.manifest
+C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5\obj\x86\Debug\ProgrammingAssignment5.application
