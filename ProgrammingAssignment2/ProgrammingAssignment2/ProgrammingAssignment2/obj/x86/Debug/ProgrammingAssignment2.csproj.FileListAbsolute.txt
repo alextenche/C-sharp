@@ -1,9 +1,0 @@
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\bin\x86\Debug\ProgrammingAssignment2.exe
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\bin\x86\Debug\ProgrammingAssignment2.pdb
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\obj\x86\Debug\ProgrammingAssignment2.csprojResolveAssemblyReference.cache
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\obj\x86\Debug\ProgrammingAssignment2.exe
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\obj\x86\Debug\ProgrammingAssignment2.pdb
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\bin\x86\Debug\Content\img0.xnb
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\bin\x86\Debug\Content\img1.xnb
-C:\Users\Alexandru\Desktop\ProgrammingAssignment2\ProgrammingAssignment2\ProgrammingAssignment2\bin\x86\Debug\Content\img2.xnb

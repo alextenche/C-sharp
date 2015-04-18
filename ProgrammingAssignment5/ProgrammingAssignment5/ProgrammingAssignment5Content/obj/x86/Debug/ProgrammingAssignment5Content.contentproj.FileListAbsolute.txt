@@ -1,2 +1,0 @@
-C:\Users\Alexandru\Desktop\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5Content\obj\x86\Debug\ProgrammingAssignment5Content.contentprojResolveAssemblyReference.cache
-C:\Users\Alexandru\Desktop\C-sharp\ProgrammingAssignment5\ProgrammingAssignment5\ProgrammingAssignment5Content\obj\x86\Debug\ProgrammingAssignment5Content.contentprojResolveAssemblyReference.cache

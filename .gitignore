@@ -1,3 +1,7 @@
+/RequiredAssessments/*
+/RequiredAssessments/
+RequiredAssessments/*
+RequiredAssessments/
 .DS_Store
 .DS_Store?
 ._*

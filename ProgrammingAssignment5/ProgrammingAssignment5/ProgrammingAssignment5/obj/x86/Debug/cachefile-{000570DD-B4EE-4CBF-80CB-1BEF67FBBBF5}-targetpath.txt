@@ -1,3 +1,0 @@
-Content\explosion.xnb
-Content\mine.xnb
-Content\teddybear.xnb
