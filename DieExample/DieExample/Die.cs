@@ -15,7 +15,28 @@ namespace DieExample
 
         int numSides;
         int topSide;
+        Random rand = new Random();
 
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Die() : this(6)
+        {
+        }
+
+        /// <summary>
+        /// Constructor with number of sides specified
+        /// </summary>
+        /// <param name="numSides">number of sides for die</param>
+        public Die(int numSides)
+        {
+            this.numSides = numSides;
+            topSide = 1;
+        }
         #endregion
 
         #region Properties
@@ -35,7 +56,20 @@ namespace DieExample
         {
             get { return topSide; }
         }
-        
+     
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Rolls the die
+        /// </summary>
+        public void Roll()
+        {
+            
+            topSide = rand.Next(1, numSides + 1);
+
+        }
 
         #endregion
     }
