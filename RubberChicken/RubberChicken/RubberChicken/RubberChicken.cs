@@ -5,6 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace RubberChicken
 {
@@ -21,7 +22,16 @@ namespace RubberChicken
         // drawing and moving support
         Texture2D sprite;
         Rectangle drawRectangle;
-        Vector2 velocity;
+
+        // moving support
+        const int RUBBER_CHICKEN_SPEED = 1;
+        Vector2 velocity = Vector2.Zero;
+        
+
+        // click processing
+        bool clickStarted = false;
+        bool buttonReleased = true;
+        bool moving = false;
 
         #endregion
 
@@ -54,6 +64,65 @@ namespace RubberChicken
         }
         #endregion
 
+
+
+        #region Methods
+
+        /// <summary>
+        /// Update the rubber chicken, moving and launching  when clicked
+        /// </summary>
+        /// <param name="gameTime">game time</param>
+        /// <param name="mouse">mouse state</param>
+        public void Update(GameTime gameTime, MouseState mouse)
+        {
+            // move based on velocity
+            drawRectangle.X += (int)(velocity.X * gameTime.ElapsedGameTime.Milliseconds);
+            drawRectangle.Y += (int)(velocity.Y * gameTime.ElapsedGameTime.Milliseconds);
+
+            // launch on click
+            // check for mouse over rubber chicken
+            if (drawRectangle.Contains(mouse.X, mouse.Y))
+            {
+                // check for click started on rubber chicken
+                if (mouse.LeftButton == ButtonState.Pressed && buttonReleased)
+                {
+                    clickStarted = true;
+                    buttonReleased = false;
+                }
+                else if (mouse.LeftButton == ButtonState.Released)
+                {
+                    buttonReleased = true;
+                }
+
+                // if click finished on rubber chicken, change game state
+                if (clickStarted)
+                {
+                    // launch if not already moving
+                    if (!moving)
+                    {
+                        moving = true;
+                        velocity = new Vector2(0, -1 * RUBBER_CHICKEN_SPEED);
+                    }
+
+                    clickStarted = false;
+                }
+            }
+        }
+        
+        
+        /// <summary>
+        /// Draws the rubber chicken
+        /// </summary>
+        /// <param name="spriteBatch">sprite batch</param>
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(sprite, drawRectangle, Color.White);
+        }
+
+        #endregion
+
+
+
         #region Contructors
 
         /// <summary>
@@ -65,10 +134,11 @@ namespace RubberChicken
         public RubberChicken(Texture2D sprite, Vector2 location, int damage)
         {
             this.sprite = sprite;
+            this.damage = damage;
 
             // build draw rectangle
             drawRectangle = new Rectangle((int)(location.X - sprite.Width / 2), (int)(location.Y - sprite.Height / 2), sprite.Width, sprite.Height);
-            location = 
+             
         }
 
         #endregion

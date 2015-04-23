@@ -19,12 +19,15 @@ namespace RubberChicken
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        const int RUBBER_CHICKEN_DAMAGE = 100;
         RubberChicken rubberChicken;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            IsMouseVisible = true;
         }
 
         /// <summary>
@@ -50,7 +53,9 @@ namespace RubberChicken
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // create rubber chicken
-            rubberChicken = new RubberChicken();
+            rubberChicken = new RubberChicken(Content.Load<Texture2D>("rubberChicken"),
+                new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2),
+                RUBBER_CHICKEN_DAMAGE);
         }
 
         /// <summary>
@@ -72,8 +77,10 @@ namespace RubberChicken
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            MouseState mouse = Mouse.GetState();
 
-            // TODO: Add your update logic here
+            // update the reubber chicken
+            rubberChicken.Update(gameTime, mouse);
 
             base.Update(gameTime);
         }
@@ -86,7 +93,12 @@ namespace RubberChicken
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            // draw the rubber chicken
+            spriteBatch.Begin();
+
+            rubberChicken.Draw(spriteBatch);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
